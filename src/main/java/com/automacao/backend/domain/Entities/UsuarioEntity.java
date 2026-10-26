@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "usuarios")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class UsuarioEntity {
+public abstract class UsuarioEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
@@ -30,10 +30,10 @@ public class UsuarioEntity {
 	@Column(nullable = false, unique = true, length = 11)
 	private String cpf;
 
-	public UsuarioEntity() {
+	protected UsuarioEntity() {
 	}
 
-	public UsuarioEntity(String nome, String email, String cpf) {
+	protected UsuarioEntity(String nome, String email, String cpf) {
 		this.nome = nome;
 		this.email = email;
 		this.cpf = cpf;
