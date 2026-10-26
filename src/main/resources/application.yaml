@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: automacao-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/automation
+    username: postgres
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+
+server:
+  port: 8080
