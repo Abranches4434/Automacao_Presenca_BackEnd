@@ -17,8 +17,8 @@ public class EstudanteEntity extends UsuarioEntity {
 	public EstudanteEntity() {
 	}
 
-	public EstudanteEntity(String nome, String email, String matricula, String curso) {
-		super(nome, email);
+	public EstudanteEntity(String nome, String email, String cpf, String matricula, String curso) {
+		super(nome, email, cpf);
 		this.matricula = matricula;
 		this.curso = curso;
 	}
